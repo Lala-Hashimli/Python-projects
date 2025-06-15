@@ -22,4 +22,4 @@ This is a console-based food ordering system that simulates KFC-style menu selec
 
 ## 📸 Demo
 
-![1750023784031](images/README/1750023784031.png)
+![example-receipt](KFC-order-system/example-receipt.png)
