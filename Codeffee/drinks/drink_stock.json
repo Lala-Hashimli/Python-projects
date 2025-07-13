@@ -1,0 +1,102 @@
+{
+    "Hot Coffee": {
+        "Brewed Coffee": {
+            "amount": 4.0
+        },
+        "Caffe Americano": {
+            "amount": 4.5
+        },
+        "Caffe Latte": {
+            "amount": 6.0
+        },
+        "Cappuccino": {
+            "amount": 6.0
+        },
+        "Flat White": {
+            "amount": 6.0
+        },
+        "White Chocolate Mocha": {
+            "amount": 6.5
+        },
+        "Caramel Macchiato": {
+            "amount": 8.8
+        }
+    },
+    "Cold Coffee": {
+        "Iced Coffee": {
+            "amount": 4.0
+        },
+        "Iced Americano": {
+            "amount": 5.0
+        },
+        "Iced Latte": {
+            "amount": 6.0
+        },
+        "Cold Brew": {
+            "amount": 5.0
+        },
+        "Nitro Cold Brew": {
+            "amount": 6.0
+        }
+    },
+    "Hot Tea": {
+        "Somovar tea with thyme": {
+            "amount": 3.5
+        },
+        "Somovar tea without thyme": {
+            "amount": 3.0
+        },
+        "English Breakfast": {
+            "amount": 3.0
+        },
+        "Earl Grey": {
+            "amount": 4.0
+        },
+        "Herbal Tea": {
+            "amount": 5.0
+        }
+    },
+    "Cold Tea": {
+        "Iced Shaken Tea": {
+            "amount": 5.0
+        }
+    },
+    "Refreshers": {
+        "Strawberry Achai Refresher": {
+            "amount": 5.5
+        },
+        "Mango Dragonfruit Refresher": {
+            "amount": 6.0
+        }
+    },
+    "Frappuccino Blended Beverage": {
+        "Coffee Frappuccino": {
+            "amount": 7.0
+        },
+        "Caramel Frappuccino": {
+            "amount": 7.5
+        },
+        "White Chocolate Mocha Frappuccino": {
+            "amount": 7.5
+        }
+    },
+    "Hot Chocolate, Lemonade": {
+        "Hot Chocolate": {
+            "amount": 5.0
+        },
+        "Steamed Milk ": {
+            "amount": 4.5
+        },
+        "Lemonade": {
+            "amount": 6.0
+        }
+    },
+    "Bottled Beverages": {
+        "Bottled water": {
+            "amount": 3.0
+        },
+        "Juices": {
+            "amount": 3.5
+        }
+    }
+}

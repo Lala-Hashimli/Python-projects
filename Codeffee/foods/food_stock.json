@@ -1,0 +1,51 @@
+{
+    "Breakfast": {
+        "Bacon & Egg Sandwich": {
+            "amount": 7.0
+        },
+        "Cheddar Egg Sandwich": {
+            "amount": 7.0
+        },
+        "Egg White Wrap": {
+            "amount": 7.0
+        }
+    },
+    "Bakery": {
+        "Butter / Chocolate Croissant": {
+            "amount": 4.5
+        },
+        "Blueberry Muffin": {
+            "amount": 5.0
+        },
+        "Plain Bagel": {
+            "amount": 5.0
+        }
+    },
+    "Treats": {
+        "Chocolate Chip Cookie": {
+            "amount": 4.5
+        },
+        "Brownie / Cake Pop": {
+            "amount": 4.5
+        }
+    },
+    "Lunch": {
+        "Grilled Cheese on Sourdough": {
+            "amount": 9.0
+        },
+        "Ham & Swiss Baguette": {
+            "amount": 10.0
+        },
+        "Turkey Provolone Ciabatta": {
+            "amount": 9.0
+        }
+    },
+    "Snacks": {
+        "Protein Box / Nuts pack": {
+            "amount": 5.0
+        },
+        "Biscotti / Madeleines": {
+            "amount": 4.0
+        }
+    }
+}

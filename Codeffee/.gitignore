@@ -1,0 +1,28 @@
+
+# Sensitive / private data
+private_data/
+*.xlsx
+*.png
+*.jpg
+*.jpeg
+
+# JSON data files
+*.json
+!drinks/drink_stock.json
+!foods/food_stock.json
+
+# Ignore purchase histories and stats
+purchase_history.xlsx
+product_statistics.png
+*_purchase_history*.xlsx
+
+# Ignore receipt images (optional)
+receipt/*.png
+receipt/*.jpg
+
+# Git log / history (auto-generated)
+*.log
+
+# Ignore compiled Excel exports
+*.xls
+*.csv
