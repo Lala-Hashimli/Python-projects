@@ -1,0 +1,10 @@
+# JSON files (e.g. users.json, flights.json)
+*.json
+
+# Excel files (e.g. *.xlsx export files)
+*.xlsx
+
+# PDF files (e.g. ticket PDFs)
+*.pdf
+
+
