@@ -5,10 +5,10 @@ from settings import sender_email, app_password, file_to_attach, image_path
 from email_utils import create_email, attach_file, attach_inline_image
 
 
-excel_file = "table.xlsx"  
+excel_file = "table.xlsx"
 cid = "image"
 server = smtplib.SMTP("smtp.gmail.com", 587)
-server.starttls()  
+server.starttls()
 server.login(sender_email, app_password)
 msg = MIMEMultipart()
 msg["Subject"] = "Notification"
@@ -19,7 +19,7 @@ df = pd.read_excel(excel_file)
 for index, row in df.iterrows():
     recipient_email = row["Email"]
     recipient_name = row.get("Name", "")
-    EMAIL_SUBJECT = row.get("Message", "Hello!")   
+    EMAIL_SUBJECT = row.get("Message", "Hello!")
 
     body = f"Hello {recipient_name},\n\n{EMAIL_SUBJECT}\n\nBest regards"
 

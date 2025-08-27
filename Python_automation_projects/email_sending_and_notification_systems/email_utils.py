@@ -4,15 +4,17 @@ from email.mime.text import MIMEText
 from email.mime.base import MIMEBase
 from email.mime.image import MIMEImage
 from email.mime.multipart import MIMEMultipart
-from settings import *
 
 
-def create_email(sender_email, recipient_email, EMAIL_SUBJECT, body, html=False):
+def create_email(sender_email,
+                recipient_email,
+                EMAIL_SUBJECT,
+                body, html=False):
     msg = MIMEMultipart()
     msg["From"] = sender_email
     msg["To"] = recipient_email
     msg["Subject"] = EMAIL_SUBJECT
-    
+
     if html:
         msg.attach(MIMEText(body, "html"))
     else:
@@ -35,14 +37,16 @@ def attach_file(msg, file_path):
     except Exception as e:
         print(f"⚠️ Could not attach file: {e}")
         return False
-    
+
 def attach_inline_image(msg, image_path, cid):
-    
     try:
         with open(image_path, "rb") as f:
             img = MIMEImage(f.read())
             img.add_header("Content-ID", f"<{cid}>")
-            img.add_header("Content-Disposition", "inline", filename=os.path.basename(image_path))
+            img.add_header(
+                "Content-Disposition",
+                "inline",
+                filename=os.path.basename(image_path))
             msg.attach(img)
     except Exception as e:
         print(f"⚠️ Could not attach inline image {image_path}: {e}")

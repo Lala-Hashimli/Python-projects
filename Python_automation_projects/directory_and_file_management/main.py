@@ -4,7 +4,6 @@ import stat
 
 
 def create_folder(folder_name):
-    """Create a new folder"""
     if not os.path.exists(folder_name):
         os.makedirs(folder_name)
         print(f"📁 Folder created: {folder_name}")
@@ -13,14 +12,12 @@ def create_folder(folder_name):
 
 
 def create_file(file_name, content=""):
-    """Create a new file and write content"""
     with open(file_name, "w", encoding="utf-8") as f:
         f.write(content)
     print(f"📄 File created: {file_name}")
 
 
 def read_file(file_name):
-    """Read and print file content"""
     if os.path.exists(file_name):
         with open(file_name, "r", encoding="utf-8") as f:
             print(f"📖 File content ({file_name}):\n{f.read()}")
@@ -29,7 +26,6 @@ def read_file(file_name):
 
 
 def delete_file(file_name):
-    """Delete a file"""
     if os.path.exists(file_name):
         os.remove(file_name)
         print(f"🗑️ File deleted: {file_name}")
@@ -38,7 +34,6 @@ def delete_file(file_name):
 
 
 def rename_item(old_name, new_name):
-    """Rename a file or folder"""
     if os.path.exists(old_name):
         os.rename(old_name, new_name)
         print(f"✏️ Renamed: {old_name} → {new_name}")
@@ -47,7 +42,6 @@ def rename_item(old_name, new_name):
 
 
 def move_file(file_name, target_folder):
-    """Move a file to another folder"""
     if os.path.exists(file_name):
         os.makedirs(target_folder, exist_ok=True)
         shutil.move(file_name, target_folder)
@@ -57,13 +51,11 @@ def move_file(file_name, target_folder):
 
 
 def handle_remove_readonly(func, path, exc_info):
-    """Remove readonly attribute and delete file/folder"""
     os.chmod(path, stat.S_IWRITE)
     func(path)
 
 
 def delete_folder(folder_name):
-    """Delete a folder and all its contents"""
     if os.path.exists(folder_name):
         shutil.rmtree(folder_name, onerror=handle_remove_readonly)
         print(f"🗑️ Folder deleted: {folder_name}")
@@ -72,15 +64,13 @@ def delete_folder(folder_name):
 
 
 def organize_files_by_type(folder_name):
-    """Organize files in a folder by their extensions"""
     if not os.path.exists(folder_name):
         print("❌ Folder not found!")
         return
-    
     for file in os.listdir(folder_name):
         file_path = os.path.join(folder_name, file)
         if os.path.isfile(file_path):
-            ext = file.split(".")[-1]  # file extension
+            ext = file.split(".")[-1]
             target_folder = os.path.join(folder_name, ext.upper())
             os.makedirs(target_folder, exist_ok=True)
             shutil.move(file_path, target_folder)
@@ -88,7 +78,6 @@ def organize_files_by_type(folder_name):
 
 
 def clean_empty_folders(base_path):
-    """Remove empty folders recursively"""
     for root, dirs, files in os.walk(base_path, topdown=False):
         if not os.listdir(root):
             os.rmdir(root)
